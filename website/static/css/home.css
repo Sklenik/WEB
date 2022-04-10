@@ -4,18 +4,157 @@
   --dark: rgb(0, 108, 122);
 }
 
-main section.banner {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+.main_home {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  top: 200px;
+  left: 50px;
 }
 
-.h1-home {
-  color: var(--dark);
-  background-color: var(--light);
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 0.7fr 0.15fr 0.5fr 0.25fr 0.25fr 0.7fr 0.25fr 0.25fr 0.5fr;
+  gap: 10px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header ."
+    "Image Text ."
+    "Image-des Text ."
+    ". . ."
+    ". Header2 Header2"
+    ". projname1 projname2"
+    ". proj-1 proj2"
+    ". proj1-text proj2-text"
+    ". . ."
+    "Footer Footer Footer";
 }
 
-.p-home {
+.Header {
+  grid-area: Header;
   color: var(--light);
   background-color: var(--dark);
+  text-align: center;
+  margin: Auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Image {
+  grid-area: Image;
+}
+
+.Image-des {
+  grid-area: Image-des;
+  color: var(--dark);
+  background-color: var(--light);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Text {
+  grid-area: Text;
+  color: var(--dark);
+  background-color: var(--light);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Header2 {
+  grid-area: Header2;
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.projname1 {
+  grid-area: projname1;
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.projname2 {
+  grid-area: projname2;
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.proj-1 {
+  grid-area: proj-1;
+}
+
+.proj2 {
+  grid-area: proj2;
+}
+
+.proj1-text {
+  grid-area: proj1-text;
+  color: var(--dark);
+  background-color: var(--light);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.proj2-text {
+  grid-area: proj2-text;
+  color: var(--dark);
+  background-color: var(--light);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Footer {
+  grid-area: Footer;
+  color: white;
+  background-color: var(--light);
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  margin: 0;
 }

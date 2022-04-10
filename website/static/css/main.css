@@ -46,6 +46,7 @@ h1 {
   text-transform: uppercase;
 }
 
+/*
 .hamburger {
   display: block;
   position: relative;
@@ -131,13 +132,15 @@ h1 {
   border-radius: 99px;
 }
 
+
 .footer {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   background: #15151a;
-  height: auto;
-  width: 100vw;
   font-family: "Open Sans";
   padding-top: 40px;
   color: #fff;
 }
+*/

@@ -16,9 +16,9 @@
     <nav>
       <div class="container">
         <h1 class="slide-right">Sklenik</h1>
-
+        <!--
         <div class="menu">
-          <a class="is-active" id="home" href="/">Home</a>
+          <a id="home" href="/">Home</a>
           <a id="about" href="/about">About</a>
           <a id="projects " href="/projects">Projects</a>
           <a id="contact" href="/contact">Contact</a>
@@ -30,13 +30,15 @@
           <span></span>
         </button>
       </div>
+      -->
     </nav>
 
-    <div class="container">{% block content %} {% endblock %}</div>
+    {% block content %}{% endblock %}
     <!-- page content /-->
 
-    <footer class="footer"></footer>
-    <!-- footer /-->
+    <!-- <footer class="footer">
+      <p>Copyright 2022 Filip Sklenář</p>
+    </footer> /-->
 
     <script src="static/js/main.js"></script>
     <!-- some javascript toomfoolery /-->

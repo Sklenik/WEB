@@ -1,0 +1,68 @@
+:root {
+  --primary: white;
+  --light: #15151a;
+  --dark: rgb(0, 108, 122);
+}
+
+.main_contact {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  top: 200px;
+  left: 50px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.2fr 1.4fr 1fr;
+  grid-template-rows: 0.25fr 0.25fr 0.5fr 0.25fr 0.25fr;
+  grid-auto-columns: 1fr;
+  gap: 10px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . ."
+    ". Header1 . Header2 ."
+    ". COntact . Github ."
+    ". . . . ."
+    "Footer Footer Footer Footer Footer";
+}
+
+.Footer {
+  grid-area: Footer;
+  color: white;
+  background-color: var(--light);
+}
+
+.Header1 {
+  grid-area: Header1;
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Header2 {
+  grid-area: Header2;
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.Contact {
+  grid-area: Contact;
+}
+
+.Github {
+  grid-area: Github;
+}
