@@ -1,0 +1,22 @@
+.slide {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 300px;
+  max-width: 500px;
+}
+
+.slide-right {
+  animation: 1s slide 0.25s forwards;
+  transform: translateX(-120%);
+}
+
+.slide-left {
+  animation: 1s slide 0.25s forwards;
+  transform: translateX(+120%);
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(0);
+  }
+}

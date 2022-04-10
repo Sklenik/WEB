@@ -1,0 +1,21 @@
+:root {
+  --primary: white;
+  --light: #15151a;
+  --dark: rgb(0, 108, 122);
+}
+
+main section.banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.h1-home {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.p-home {
+  color: var(--light);
+  background-color: var(--dark);
+}

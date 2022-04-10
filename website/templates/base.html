@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bare necessities /-->
+
+    <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/slide.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/home.css" />
+    <!-- CSS /-->
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="slide-right">Sklenik</h1>
+
+        <div class="menu">
+          <a class="is-active" id="home" href="/">Home</a>
+          <a id="about" href="/about">About</a>
+          <a id="projects " href="/projects">Projects</a>
+          <a id="contact" href="/contact">Contact</a>
+        </div>
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <!-- page content /-->
+
+    <footer class="footer"></footer>
+    <!-- footer /-->
+
+    <script src="static/js/main.js"></script>
+    <!-- some javascript toomfoolery /-->
+  </body>
+</html>
