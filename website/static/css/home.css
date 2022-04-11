@@ -44,8 +44,17 @@
   border-radius: 99px;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .Image {
   grid-area: Image;
+
+  object-fit: cover;
+  height: 264px;
+  width: 315px;
 }
 
 .Image-des {
@@ -114,11 +123,17 @@
 }
 
 .proj-1 {
+  object-fit: cover;
   grid-area: proj-1;
+  height: 100px;
+  width: 100px;
 }
 
 .proj2 {
+  object-fit: cover;
   grid-area: proj2;
+  height: 100px;
+  width: 100px;
 }
 
 .proj1-text {
