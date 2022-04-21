@@ -2,6 +2,7 @@
   --primary: white;
   --light: #15151a;
   --dark: rgb(0, 108, 122);
+  --border_rad_px: 12px;
 }
 
 .main_home {
@@ -14,21 +15,21 @@
 
 .home-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.25fr 0.7fr 0.15fr 0.5fr 0.25fr 0.25fr 0.7fr 0.25fr 0.25fr 0.5fr;
   gap: 10px 30px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Header Header ."
-    "Image Text ."
-    "Image-des Text ."
-    ". . ."
-    ". Header2 Header2"
-    ". projname1 projname2"
-    ". proj-1 proj2"
-    ". proj1-text proj2-text"
-    ". . ."
-    "Footer Footer Footer";
+    "Header Header"
+    "Image Text"
+    "Image-des Text"
+    ". ."
+    "Header2 Header2"
+    "projname1 projname2"
+    "proj-1 proj2"
+    "proj1-text proj2-text"
+    ". ."
+    "Footer Footer";
 }
 
 .Header {
@@ -40,21 +41,19 @@
   font-weight: 600;
   text-decoration: none;
   transition: 0.4s;
-  padding: 8px 16px;
-  border-radius: 99px;
+  padding: 8px 70px;
+  border-radius: var(--border_rad_px);
 }
 
-img {
-  max-width: 100%;
+div > img {
+  width: auto;
+  height: auto;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .Image {
   grid-area: Image;
-
-  object-fit: cover;
-  height: 264px;
-  width: 315px;
 }
 
 .Image-des {
@@ -67,20 +66,26 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
-.Text {
+.home-intro-text {
   grid-area: Text;
   color: var(--dark);
   background-color: var(--light);
-  text-align: center;
+  text-align: justify;
   margin: auto;
   font-weight: 600;
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+p {
+  padding-bottom: 10px;
 }
 
 .Header2 {
@@ -93,7 +98,7 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
 .projname1 {
@@ -106,7 +111,7 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
 .projname2 {
@@ -119,21 +124,15 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
 .proj-1 {
-  object-fit: cover;
   grid-area: proj-1;
-  height: 100px;
-  width: 100px;
 }
 
 .proj2 {
-  object-fit: cover;
   grid-area: proj2;
-  height: 100px;
-  width: 100px;
 }
 
 .proj1-text {
@@ -146,7 +145,7 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
 .proj2-text {
@@ -159,13 +158,14 @@ img {
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
-  border-radius: 99px;
+  border-radius: var(--border_rad_px);
 }
 
+/*
 .Footer {
   grid-area: Footer;
   color: white;
-  background-color: var(--light);
+  background-color: blue;
   text-align: center;
   font-weight: 600;
   text-decoration: none;
@@ -173,3 +173,4 @@ img {
   padding: 8px 16px;
   margin: 0;
 }
+*/
