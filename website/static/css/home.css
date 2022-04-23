@@ -5,20 +5,13 @@
   --border_rad_px: 12px;
 }
 
-.main_home {
-  max-width: 900px;
-  position: relative;
-  margin: auto;
-  top: 200px;
-  left: 50px;
-}
-
 .home-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.25fr 0.7fr 0.15fr 0.5fr 0.25fr 0.25fr 0.7fr 0.25fr 0.25fr 0.5fr;
-  gap: 10px 30px;
-  grid-auto-flow: row;
+  grid-template-rows: 0.25fr 1fr 0.13fr 0.5fr 0.25fr 0.25fr 1fr 0.25fr;
+
+  gap: 10px 10px;
+
   grid-template-areas:
     "Header Header"
     "Image Text"
@@ -26,10 +19,8 @@
     ". ."
     "Header2 Header2"
     "projname1 projname2"
-    "proj-1 proj2"
-    "proj1-text proj2-text"
-    ". ."
-    "Footer Footer";
+    "proj-1 proj-2"
+    "proj1-text proj2-text";
 }
 
 .Header {
@@ -37,11 +28,8 @@
   color: var(--light);
   background-color: var(--dark);
   text-align: center;
-  margin: Auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
-  padding: 8px 70px;
   border-radius: var(--border_rad_px);
 }
 
@@ -54,38 +42,34 @@ div > img {
 
 .Image {
   grid-area: Image;
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark);
 }
 
 .Image-des {
   grid-area: Image-des;
   color: var(--dark);
-  background-color: var(--light);
-  text-align: center;
-  margin: auto;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.4s;
-  padding: 8px 16px;
-  border-radius: var(--border_rad_px);
-}
 
-.home-intro-text {
-  grid-area: Text;
-  color: var(--dark);
-  background-color: var(--light);
-  text-align: justify;
-  margin: auto;
+  text-align: center;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
-  padding: 8px 16px;
+
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: var(--dark);
 }
 
-p {
-  padding-bottom: 10px;
+.home-intro-text {
+  grid-area: Text;
+
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
 
 .Header2 {
@@ -93,12 +77,13 @@ p {
   color: var(--light);
   background-color: var(--dark);
   text-align: center;
-  margin: auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
   padding: 8px 16px;
+
   border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
 
 .projname1 {
@@ -106,12 +91,13 @@ p {
   color: var(--light);
   background-color: var(--dark);
   text-align: center;
-  margin: auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
   padding: 8px 16px;
+
   border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
 
 .projname2 {
@@ -119,58 +105,49 @@ p {
   color: var(--light);
   background-color: var(--dark);
   text-align: center;
-  margin: auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
   padding: 8px 16px;
+
   border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
 
 .proj-1 {
   grid-area: proj-1;
+  display: flex;
+  justify-content: center;
 }
 
-.proj2 {
-  grid-area: proj2;
+.proj-2 {
+  grid-area: proj-2;
+  display: flex;
+  justify-content: center;
 }
 
 .proj1-text {
   grid-area: proj1-text;
   color: var(--dark);
-  background-color: var(--light);
   text-align: center;
-  margin: auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
   padding: 8px 16px;
+
   border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
 
 .proj2-text {
   grid-area: proj2-text;
   color: var(--dark);
-  background-color: var(--light);
   text-align: center;
-  margin: auto;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.4s;
   padding: 8px 16px;
-  border-radius: var(--border_rad_px);
-}
 
-/*
-.Footer {
-  grid-area: Footer;
-  color: white;
-  background-color: blue;
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.4s;
-  padding: 8px 16px;
-  margin: 0;
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }
-*/

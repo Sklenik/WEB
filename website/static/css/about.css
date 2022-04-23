@@ -5,11 +5,11 @@
   --border_rad_px: 12px;
 }
 
-.contact-container {
+.about-container {
   display: grid;
 }
 
-.contact_text {
+.about_text {
   color: var(--light);
   background-color: var(--dark);
 }
