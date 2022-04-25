@@ -1,0 +1,45 @@
+.home-intro-text {
+  grid-area: Text;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.565fr 0.565fr;
+  grid-template-areas:
+    "hit-1"
+    "hit-2";
+
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.hit-1 {
+  grid-area: hit-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  padding: auto 40px 0px 40px;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: purple; /*uncomment for debugging*/
+}
+
+.hit-2 {
+  grid-area: hit-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  padding: 0px 40px 40px 40px;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: red; /*uncomment for debugging*/
+}
