@@ -25,11 +25,16 @@
 
 .Header {
   grid-area: Header;
-  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
-  text-align: center;
+
+  color: var(--light);
   font-weight: 600;
   text-decoration: none;
+
   border-radius: var(--border_rad_px);
 }
 
@@ -49,8 +54,11 @@ div > img {
 
 .Image-des {
   grid-area: Image-des;
-  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  color: var(--dark);
   text-align: center;
   font-weight: 600;
   text-decoration: none;
@@ -62,6 +70,9 @@ div > img {
 
 .home-intro-text {
   grid-area: Text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   color: var(--dark);
   font-weight: 600;
@@ -74,12 +85,16 @@ div > img {
 
 .Header2 {
   grid-area: Header2;
-  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
+
+  color: var(--light);
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  padding: 8px 16px;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -88,12 +103,15 @@ div > img {
 
 .projname1 {
   grid-area: projname1;
-  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
-  text-align: center;
+
+  color: var(--light);
   font-weight: 600;
   text-decoration: none;
-  padding: 8px 16px;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -102,9 +120,13 @@ div > img {
 
 .projname2 {
   grid-area: projname2;
-  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
-  text-align: center;
+
+  color: var(--light);
   font-weight: 600;
   text-decoration: none;
   padding: 8px 16px;
@@ -128,8 +150,11 @@ div > img {
 
 .proj1-text {
   grid-area: proj1-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--dark);
-  text-align: center;
   font-weight: 600;
   text-decoration: none;
   padding: 8px 16px;
@@ -141,8 +166,11 @@ div > img {
 
 .proj2-text {
   grid-area: proj2-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--dark);
-  text-align: center;
   font-weight: 600;
   text-decoration: none;
   padding: 8px 16px;
