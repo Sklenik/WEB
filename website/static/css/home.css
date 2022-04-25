@@ -70,9 +70,12 @@ div > img {
 
 .home-intro-text {
   grid-area: Text;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.565fr 0.565fr;
+  grid-template-areas:
+    "hit-1"
+    "hit-2";
 
   color: var(--dark);
   font-weight: 600;
@@ -81,6 +84,32 @@ div > img {
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: var(--dark);
+}
+
+.hit-1 {
+  grid-area: hit-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px 20px 0px 20px; /*top right bottom left*/
+
+  /*border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: purple;*/ /*uncomment for debugging*/
+}
+
+.hit-2 {
+  grid-area: hit-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px 20px 20px 20px; /*top right bottom left*/
+
+  /*border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: red;*/ /*uncomment for debugging*/
 }
 
 .Header2 {
@@ -157,7 +186,6 @@ div > img {
   color: var(--dark);
   font-weight: 600;
   text-decoration: none;
-  padding: 8px 16px;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -173,7 +201,6 @@ div > img {
   color: var(--dark);
   font-weight: 600;
   text-decoration: none;
-  padding: 8px 16px;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
