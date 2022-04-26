@@ -7,9 +7,135 @@
 
 .projects-container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.15fr 0.1fr 1fr 0.25fr 0.1fr 1fr;
+
+  gap: 10px 10px;
+
+  grid-template-areas:
+    "Header2 Header2"
+    "projname1 projname1"
+    "proj-1 proj1-text"
+    " . ."
+    "projname2 projname2"
+    "proj-2 proj2-text";
 }
 
-.projects_text {
-  color: var(--light);
+.Header2 {
+  grid-area: Header2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
+
+  color: var(--light);
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 200%;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.projname1 {
+  grid-area: projname1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 150%;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.projname2 {
+  grid-area: projname2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 17%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 150%;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.proj-1 {
+  grid-area: proj-1;
+  display: flex;
+  justify-content: stretch;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: white;
+
+  overflow: hidden;
+}
+
+.proj-2 {
+  grid-area: proj-2;
+  display: flex;
+  justify-content: stretch;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+
+  overflow: hidden;
+}
+
+.proj1-text {
+  grid-area: proj1-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: large;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.proj2-text {
+  grid-area: proj2-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: large;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
 }

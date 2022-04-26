@@ -8,19 +8,13 @@
 .home-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.25fr 1fr 0.13fr 0.5fr 0.25fr 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.2fr 1fr;
 
   gap: 10px 10px;
 
   grid-template-areas:
     "Header Header"
-    "Image Text"
-    "Image-des Text"
-    ". ."
-    "Header2 Header2"
-    "projname1 projname2"
-    "proj-1 proj-2"
-    "proj1-text proj2-text";
+    "home-subcontainer home-subcontainer";
 }
 
 .Header {
@@ -34,8 +28,22 @@
   color: var(--light);
   font-weight: 600;
   text-decoration: none;
+  font-size: 250%;
 
   border-radius: var(--border_rad_px);
+}
+
+.home-subcontainer {
+  grid-area: home-subcontainer;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1.37fr 0.13fr;
+
+  gap: 10px 10px;
+
+  grid-template-areas:
+    "Image Text"
+    "Image-des Text";
 }
 
 div > img {
@@ -48,8 +56,7 @@ div > img {
 .Image {
   grid-area: Image;
   display: flex;
-  justify-content: center;
-  margin: auto;
+  justify-items: stretch;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -78,141 +85,26 @@ div > img {
   grid-area: Text;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  background-color: var(--light);
 
   color: var(--dark);
   font-weight: 600;
   text-decoration: none;
+  text-align: start;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: var(--dark);
 }
 
-.home-intro-text > p {
-  margin: 10px;
-  padding: 20px;
+.home-intro-text > div {
+  margin: 25px 20px 0px 20px;
   font-size: large;
 }
 
-.hit-1 {
+.hit {
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: transparent;
-}
-
-.hit-2 {
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: transparent; /*transparent basically hides the border*/
-}
-
-.Header2 {
-  grid-area: Header2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--dark);
-
-  color: var(--light);
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
-
-.projname1 {
-  grid-area: projname1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--dark);
-
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
-
-.projname2 {
-  grid-area: projname2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--dark);
-
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
-
-.proj-1 {
-  grid-area: proj-1;
-  display: flex;
-  justify-content: center;
-
-  margin: auto;
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-
-  overflow: hidden;
-}
-
-.proj-2 {
-  grid-area: proj-2;
-  display: flex;
-  justify-content: center;
-
-  margin: auto;
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-
-  overflow: hidden;
-}
-
-.proj1-text {
-  grid-area: proj1-text;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  color: var(--dark);
-  font-weight: 600;
-  font-size: large;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
-
-.proj2-text {
-  grid-area: proj2-text;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  color: var(--dark);
-  font-weight: 600;
-  font-size: large;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
 }

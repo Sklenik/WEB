@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/projects.css" />
     <link rel="stylesheet" type="text/css" href="static/css/contact.css" />
     <link rel="stylesheet" type="text/css" href="static/css/about.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/scrollbar.css" />
     <!-- CSS /-->
 
     <title>{% block title %} {% endblock %}</title>
@@ -18,7 +19,7 @@
   <body>
     <nav>
       <div class="container">
-        <h1 class="slide-right">Sklenik</h1>
+        <h1 class="slide-right"><div class="sklenik">Sklenik</div></h1>
 
         <div class="menu">
           <a id="home" href="/">Home</a>
@@ -35,14 +36,20 @@
       </div>
     </nav>
 
-    <main>{% block content %}{% endblock %}</main>
+    <main>{% block content %} {% endblock %}</main>
     <!-- page content /-->
 
     <footer class="footer">
-      <div>© Copyright 2022 Filip Sklenář</div>
       <div>filip1904@seznam.cz</div>
-      <a href="https://github.com/Sklenik">https://github.com/Sklenik</a>
+      <div class="footer-link">
+        <a href="https://github.com/Sklenik"
+          ><img
+            src="../static/images/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png"
+        /></a>
+      </div>
+      <div>© Copyright 2022 Filip Sklenář</div>
     </footer>
+    <!-- footer -->
 
     <script src="static/js/main.js"></script>
     <!-- some javascript toomfoolery /-->

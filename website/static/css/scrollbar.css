@@ -1,0 +1,19 @@
+:root {
+  --primary: white;
+  --light: #15151a;
+  --dark: rgb(0, 108, 122);
+  --border_rad_px: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light);
+  border-radius: 10px;
+}
