@@ -7,22 +7,34 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.15fr 0.1fr 1fr 0.25fr 0.1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.13fr 0.05fr 0.1fr 1fr 0.25fr 0.1fr 1fr 0.25fr 0.13fr 0.05fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.25fr 0.25fr;
 
   gap: 10px 10px;
 
   grid-template-areas:
-    "Header2 Header2"
-    "projname1 projname1"
-    "proj-1 proj1-text"
-    " . ."
-    "projname2 projname2"
-    "proj-2 proj2-text";
+    "proj-header_1 proj-header_1 proj-header_1 proj-header_1"
+    " . . . . "
+    "projname1 projname1 projname1 projname1"
+    "proj-1 proj-1 proj1-text proj1-text"
+    " . . . . "
+    "projname2 projname2 projname2 projname2"
+    "proj-2 proj-2 proj2-text proj2-text"
+    " . . . . "
+    "scr-header_1 scr-header_1 scr-header_1 scr-header_1"
+    ". . . ."
+    "scrname1 scrname1 scrname2 scrname2"
+    "scr-1 scr1-text scr-2 scr2-text"
+    "scrname3 scrname3 scrname4 scrname4"
+    "scr-3 scr3-text scr-4 scr4-text"
+    "scrname5 scrname5 scrname6 scrname6"
+    "scr-5 scr5-text scr-6 scr6-text"
+    " . . . . "
+    "proj_visit_github proj_visit_github proj_visit_github proj_visit_github";
 }
 
-.Header2 {
-  grid-area: Header2;
+.proj-header_1 {
+  grid-area: proj-header_1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +45,7 @@
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  font-size: 200%;
+  font-size: 250%;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -83,6 +95,8 @@
   display: flex;
   justify-content: stretch;
 
+  background-color: white; /*image doesn not fit clearly, this will make it look good*/
+
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: white;
@@ -113,7 +127,7 @@
   text-align: center;
   color: var(--dark);
   font-weight: 600;
-  font-size: large;
+  font-size: x-large;
   text-decoration: none;
 
   border-radius: var(--border_rad_px);
@@ -132,10 +146,365 @@
   text-align: center;
   color: var(--dark);
   font-weight: 600;
+  font-size: x-large;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-header_1 {
+  grid-area: scr-header_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 250%;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr1*/
+.scrname1 {
+  grid-area: scrname1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-1 {
+  grid-area: scr-1;
+  background-color: purple;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr1-text {
+  grid-area: scr1-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr2*/
+.scrname2 {
+  grid-area: scrname2;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-2 {
+  grid-area: scr-2;
+  background-color: white;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr2-text {
+  grid-area: scr2-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr3*/
+.scrname3 {
+  grid-area: scrname3;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-3 {
+  grid-area: scr-3;
+  background-color: brown;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr3-text {
+  grid-area: scr3-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr4*/
+.scrname4 {
+  grid-area: scrname4;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-4 {
+  grid-area: scr-4;
+  background-color: darkgoldenrod;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr4-text {
+  grid-area: scr4-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr5*/
+.scrname5 {
+  grid-area: scrname5;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-5 {
+  grid-area: scr-5;
+  background-color: blue;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr5-text {
+  grid-area: scr5-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+/*scr6*/
+.scrname6 {
+  grid-area: scrname6;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15%;
+
+  background-color: var(--dark);
+
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr-6 {
+  grid-area: scr-6;
+  background-color: green;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.scr6-text {
+  grid-area: scr6-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.proj_visit_github {
+  grid-area: proj_visit_github;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
   font-size: large;
   text-decoration: none;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
   border-color: var(--dark);
+}
+
+.P_button_1 {
+  display: inline-block;
+
+  background-color: var(--dark);
+
+  transition-duration: 0.4s;
+
+  padding: 4px 15px;
+  margin: 5px;
+
+  color: var(--light);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+
+  border-radius: var(--border_rad_px);
+}
+
+.P_button_1:hover {
+  background-color: white;
 }

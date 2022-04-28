@@ -10,10 +10,9 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--dark);
+  background: var(--light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--light);
-  border-radius: 10px;
+  background: var(--dark);
 }
