@@ -8,12 +8,13 @@
 .home-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.45fr 0.5fr;
+  grid-template-rows: 0.35fr 0.15fr 0.5fr;
 
   gap: 10px 10px;
 
   grid-template-areas:
     "Header Header"
+    " . . "
     "home-subcontainer home-subcontainer";
 }
 

@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 60px;
+
+  gap: 10px 10px;
+
+  background-color: black;
+
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-replit {
+  height: 50px;
+  width: 50px;
+
+  border-color: red;
+  border-style: solid;
+  border-radius: 12px;
+}
+
+.footer-github {
+  border-color: red;
+  border-style: solid;
+  border-radius: 12px;
+}
+
+.footer-subcontainer {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px 10px;
+}
