@@ -7,31 +7,19 @@
 
 .contact-container {
   display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.35fr 0.15fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
 
   gap: 10px 10px;
+  margin: 0 200px 0 200px;
+  padding-bottom: 10px;
+
+  border-bottom: 3px solid var(--dark);
+  border-radius: 0 0 12px 12px;
 
   grid-template-areas:
-    "contact-header contact-header contact-header"
-    " . . . "
-    "contact-img contact-text contact-text";
-}
-
-.contact-img {
-  grid-area: contact-img;
-
-  background-color: var(--light);
-
-  color: var(--dark);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: large;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
+    "contact-header"
+    "contact-subcontainer";
 }
 
 .contact-header {
@@ -40,6 +28,9 @@
   align-items: center;
   justify-content: center;
 
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   background-color: var(--dark);
 
   color: var(--light);
@@ -47,28 +38,51 @@
   text-decoration: none;
   font-size: 250%;
 
-  border-radius: var(--border_rad_px);
+  border-radius: 12px 12px 0 0;
 }
 
-.contact-text {
-  grid-area: contact-text;
+.contact-subcontainer {
+  grid-area: contact-subcontainer;
   display: flex;
   flex-direction: column;
 
-  padding: 20px 0 20px 0;
+  align-items: flex-start;
+  justify-content: center;
 
   gap: 10px 10px;
+}
 
-  text-align: center;
+.contact-subc-item > img {
+  height: 60px;
+  width: 60px;
 
-  background-color: var(--light);
+  padding: 5px;
 
+  background-color: var(--dark);
+}
+
+.contact-subc-item:nth-child(5) > img {
+  padding: 0px;
+}
+
+.contact-subc-item > p {
   color: var(--dark);
   font-weight: 600;
-  text-decoration: none;
-  font-size: large;
+  font-size: x-large;
+}
 
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
+.contact-subc-item {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px 10px;
+}
+
+.contact-subc-item > a {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: x-large;
 }

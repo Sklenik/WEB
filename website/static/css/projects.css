@@ -193,13 +193,18 @@
   border-color: var(--dark);
 }
 
+.scrname1 > img {
+  margin-left: 10px;
+
+  height: 40px;
+  width: 40px;
+}
+
 .scr-1 {
   grid-area: scr-1;
-  background-color: purple;
 
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: transparent;
+  border-style: none;
 }
 
 .scr1-text {

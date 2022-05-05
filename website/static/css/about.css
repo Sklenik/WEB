@@ -6,6 +6,7 @@
   --cl_lang_bg: lemonchiffon;
 }
 
+/*this could have been so much better but I am kinda lazy to optimalize it so for now it will be like this*/
 #about-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

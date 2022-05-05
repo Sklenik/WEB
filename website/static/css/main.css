@@ -173,18 +173,52 @@ main {
   gap: 10px 10px;
 }
 
+.footer > a {
+  color: white;
+  font-weight: 600;
+}
+
 .footer-subcontainer {
   display: flex;
   flex-direction: row;
 
-  gap: 10px;
+  gap: 10px 10px;
 }
 
-.footer-github {
-  padding-top: 6px;
+.footer-subcontainer > a {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  border-style: none;
+  border-radius: 20px;
+
+  overflow: hidden;
 }
 
-.footer-replit {
-  height: 46px;
-  width: 46px;
+.footer-subcontainer > a:nth-child(2) {
+  background-color: black;
 }
+
+.footer-subcontainer a > img {
+  height: 40px;
+  width: 40px;
+}
+
+.footer-subcontainer a:nth-child(1) > img {
+  padding: 6px;
+}
+
+/*
+a:nth-child(1) > img {
+  background-color: white;
+  padding: 6px;
+}
+
+a:nth-child(2) > img {
+  padding: 1px;
+}
+*/

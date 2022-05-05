@@ -1,0 +1,12 @@
+<div class="footer-subcontainer">
+        <a href="https://stackoverflow.com/users/17351121/sklenik"
+          ><img src="../static/images/stackoverflow.png"
+        /></a>
+        <a href="https://github.com/Sklenik"
+          ><img
+            src="../static/images/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png"
+        /></a>
+        <a href="https://github.com/Sklenik"
+          ><img src="../static/images/replit.png"
+        /></a>
+      </div>
