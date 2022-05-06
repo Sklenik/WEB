@@ -3,12 +3,13 @@
   --light: #15151a;
   --dark: rgb(0, 108, 122);
   --border_rad_px: 12px;
+  --cl_lang_bg: lemonchiffon;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.13fr 0.05fr 0.1fr 1fr 0.25fr 0.1fr 1fr 0.25fr 0.13fr 0.05fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.25fr 0.25fr;
+  grid-template-rows: 0.13fr 0.05fr 0.1fr 1fr 0.25fr 0.1fr 1fr 0.25fr 0.13fr 0.05fr /**/ 0.1fr 0.5fr 0.1fr 0.1fr 0.5fr 0.1fr 0.1fr 0.5fr 0.1fr /**/ 0.25fr 0.25fr;
 
   gap: 10px 10px;
 
@@ -25,10 +26,13 @@
     ". . . ."
     "scrname1 scrname1 scrname2 scrname2"
     "scr-1 scr1-text scr-2 scr2-text"
+    "scr-1 scr1-link scr-2 scr2-link"
     "scrname3 scrname3 scrname4 scrname4"
     "scr-3 scr3-text scr-4 scr4-text"
+    "scr-3 scr3-link scr-4 scr4-link"
     "scrname5 scrname5 scrname6 scrname6"
     "scr-5 scr5-text scr-6 scr6-text"
+    "scr-5 scr5-link scr-6 scr6-link"
     " . . . . "
     "proj_visit_github proj_visit_github proj_visit_github proj_visit_github";
 }
@@ -110,8 +114,7 @@
   justify-content: stretch;
 
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: transparent;
+  border-style: none;
 
   overflow: hidden;
 }
@@ -202,25 +205,43 @@
 
 .scr-1 {
   grid-area: scr-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  padding: 0 20px 0 20px;
+
+  background-color: var(--light);
+
+  border-color: rgb(159, 182, 255);
   border-radius: var(--border_rad_px);
-  border-style: none;
+  border-style: solid;
 }
 
 .scr1-text {
   grid-area: scr1-text;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: var(--light);
 
-  text-align: center;
   color: var(--dark);
-  font-weight: 600;
 
-  text-decoration: none;
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr1-link {
+  grid-area: scr1-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -249,10 +270,10 @@
 
 .scr-2 {
   grid-area: scr-2;
-  background-color: white;
+  background-color: var(--cl_lang_bg);
 
   border-radius: var(--border_rad_px);
-  border-style: solid;
+  border-style: none;
   border-color: transparent;
 }
 
@@ -270,6 +291,21 @@
   font-weight: 600;
 
   text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr2-link {
+  grid-area: scr2-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -298,11 +334,16 @@
 
 .scr-3 {
   grid-area: scr-3;
-  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
 
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: transparent;
+  border-style: none;
+
+  overflow: hidden;
 }
 
 .scr3-text {
@@ -319,6 +360,21 @@
   font-weight: 600;
 
   text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr3-link {
+  grid-area: scr3-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -347,11 +403,26 @@
 
 .scr-4 {
   grid-area: scr-4;
-  background-color: darkgoldenrod;
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: brown;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
-  border-color: transparent;
+  border-color: var(--cl_lang_bg);
+}
+
+.scr-4 div {
+  color: lemonchiffon;
+  font-weight: 600;
+  font-size: 500%;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .scr4-text {
@@ -368,6 +439,21 @@
   font-weight: 600;
 
   text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr4-link {
+  grid-area: scr4-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -396,7 +482,13 @@
 
 .scr-5 {
   grid-area: scr-5;
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  background-color: var(--cl_lang_bg);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -417,6 +509,21 @@
   font-weight: 600;
 
   text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr5-link {
+  grid-area: scr5-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
@@ -445,11 +552,27 @@
 
 .scr-6 {
   grid-area: scr-6;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px 10px;
+
+  background-color: brown;
+
+  color: lemonchiffon;
+  font-weight: 600;
+  font-size: 180%;
+  font-family: "Times New Roman", Times, serif;
 
   border-radius: var(--border_rad_px);
   border-style: solid;
-  border-color: transparent;
+  border-color: var(--cl_lang_bg);
+}
+
+.scr-6 div:nth-child(2) {
+  transform: rotate(90deg);
 }
 
 .scr6-text {
@@ -466,6 +589,21 @@
   font-weight: 600;
 
   text-decoration: none;
+
+  border-radius: var(--border_rad_px);
+  border-style: solid;
+  border-color: var(--dark);
+}
+
+.scr6-link {
+  grid-area: scr6-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light);
+
+  color: var(--dark);
 
   border-radius: var(--border_rad_px);
   border-style: solid;
