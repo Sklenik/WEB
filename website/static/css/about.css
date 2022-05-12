@@ -249,6 +249,8 @@ div > img {
 .tExt,
 .lInk {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--light);
 
@@ -264,6 +266,15 @@ div > img {
 /*TEXT*/
 .tExt {
   grid-area: TEXT;
+
+  list-style: inside;
+  padding: 0 10px 0 10px;
+
+  font-size: 100%;
+}
+
+.tExt > ul > li {
+  gap: 10px; /*FIX!*/
 }
 
 /*LINK*/
@@ -275,6 +286,7 @@ div > img {
 }
 
 .abt-section {
+  min-height: 300px;
   max-width: 445px;
 
   display: grid;
@@ -394,15 +406,27 @@ div > img {
 }
 
 #git_header {
+  background-color: rgb(240, 81, 51);
 }
 
 #OS_header {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 120, 214) 20%,
+    rgb(255, 87, 34)
+  );
 }
 
 #IDE_header {
+  background-image: linear-gradient(
+    to right,
+    rgb(31, 156, 240) 10%,
+    rgb(95, 182, 125)
+  );
 }
 
 #cmd_header {
+  background-color: rgb(140, 186, 22);
 }
 
 /*#######################-END OF WRAPPER-##############################################################*/
