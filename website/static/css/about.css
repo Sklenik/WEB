@@ -6,36 +6,9 @@
   --cl_lang_bg: lemonchiffon;
 }
 
-/*this could have been done so much better but I am kinda lazy to optimalize it so for now it will stay like this*/
-
-#about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows:
-    0.15fr /*header 1*/
-    0.025fr /*space*/
-    1fr /*scroll container*/
-    0.25fr /*space*/
-    0.15fr /*header 2*/
-    0.025fr /*space*/
-    0.1fr
-    0.35fr
-    0.1fr
-    0.35fr;
-
-  gap: 10px 10px;
-
-  grid-template-areas:
-    "about-Header_1 about-Header_1 about-Header_1 about-Header_1"
-    " . . . . "
-    "scroll_container scroll_container scroll_container scroll_container"
-    " . . . . "
-    "about-Header_2 about-Header_2 about-Header_2 about-Header_2"
-    " . . . . "
-    "lanname1 lanname1 lanname2 lanname2"
-    "lan-1 lan1-text lan-2 lan2-text"
-    "lanname3 lanname3 lanname4 lanname4"
-    "lan-3 lan3-text lan-4 lan4-text";
+.about-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 div > img {
@@ -48,81 +21,18 @@ div > img {
   max-width: 100%;
 
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: transparent;
-
-  overflow: hidden;
+  border-style: none;
 }
 
-.about-Header_1 {
-  grid-area: about-Header_1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--dark);
-
-  color: var(--light);
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 250%;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
-
-/*SCROLL CONTAINER*/
-
-.scroll_container {
-  grid-area: scroll_container;
-  display: grid;
-
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-
-  /*
-  grid-template-columns: 0.01fr 1fr 0.01fr;
-  grid-template-rows: 1fr 0.0565fr;
-
-  grid-template-areas:
-    "sm_border_left scroll_menu sm_border_right"
-    " . scroll_menu .";*/
-
-  grid-template-areas: "scroll_menu";
-
-  overflow: auto;
-}
-
-.sm_border_left {
-  grid-area: sm_border_left;
-
-  background-color: var(--dark);
-
-  border-color: var(--dark);
-  border-style: solid;
-  border-radius: 12px 0 0 12px;
-}
-
-.sm_border_right {
-  grid-area: sm_border_right;
-
-  background-color: var(--dark);
-
-  border-color: var(--dark);
-  border-style: solid;
-  border-radius: 0 12px 12px 0;
-}
-
+/*#######################-SCROLLMENU-#####################################################################*/
 .scroll_menu {
-  grid-area: scroll_menu;
   display: flex;
   flex-direction: row;
 
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
+  border-left: 3px solid var(--dark);
+  border-right: 3px solid var(--dark);
+
+  border-radius: var(--border_rad_px);
 
   overflow: auto;
 }
@@ -184,9 +94,6 @@ div > img {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-style: none;
-  border-radius: var(--border_rad_px);
 }
 
 .test-subheader_1 {
@@ -272,164 +179,208 @@ div > img {
   border-radius: 12px;
 }
 
-/*END OF SCROLL CONTAINER*/
+/*#######################-END OF SCROLLMENU-##############################################################*/
 
-.about-Header_2 {
-  grid-area: about-Header_2;
+/*#######################-WRAPPER-##############################################################*/
+
+.abt-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.abt-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+}
+
+/*HEADER*/
+.hEader {
+  grid-area: HEADER;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  padding: 10px;
 
   background-color: var(--dark);
 
-  color: var(--light);
-  text-align: center;
   font-weight: 600;
-  text-decoration: none;
-  font-size: 250%;
+  font-size: 150%;
 
+  border-style: none;
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
 }
 
-/*lan-1*/
-.lanname1 {
-  grid-area: lanname1;
-
+/*IMAGE*/
+.iMage {
+  grid-area: IMAGE;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 15%;
-
-  background-image: linear-gradient(
-    to right,
-    rgb(66, 129, 179) 40%,
-    rgb(255, 233, 88)
-  );
-
-  color: var(--light);
-  font-weight: 600;
-  font-size: 200%;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-}
-
-.lan-1 {
-  grid-area: lan-1;
-  display: flex;
-  align-items: center;
   justify-content: center;
 
   padding: 20px;
 
   background-color: var(--cl_lang_bg);
 
+  border-style: none;
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--cl_lang_bg);
 }
 
-.lan1-text {
-  grid-area: lan1-text;
+.iMage-triple-padd {
+  padding: 40px;
+}
 
+#git_img {
+  max-width: 100px;
+}
+
+#windows_img {
+  max-width: 70px;
+  border-radius: 0px;
+}
+
+.no_rad {
+  border-radius: 0px;
+}
+
+/*TEXT & LINK*/
+.tExt,
+.lInk {
   display: flex;
-  align-items: center;
-  justify-content: center;
 
   background-color: var(--light);
 
-  text-align: center;
-  color: var(--dark);
   font-weight: 600;
   font-size: large;
+  color: var(--dark);
 
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
   border-color: var(--dark);
-}
-
-/*lan-2*/
-.lanname2 {
-  grid-area: lanname2;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 15%;
-
-  background-color: rgb(92, 107, 192);
-
-  color: var(--light);
-  font-weight: 600;
-  font-size: 200%;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
   border-style: solid;
+  border-radius: var(--border_rad_px);
 }
 
-.lanname2 > img {
-  max-height: 40px;
-  max-width: 40px;
+/*TEXT*/
+.tExt {
+  grid-area: TEXT;
 }
 
-.lan-2 {
-  grid-area: lan-2;
-  display: flex;
+/*LINK*/
+.lInk {
+  grid-area: LINK;
+
   align-items: center;
   justify-content: center;
-
-  padding: 25px;
-
-  background-color: var(--cl_lang_bg);
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--cl_lang_bg);
 }
 
-.lan2-text {
-  grid-area: lan2-text;
+.abt-section {
+  max-width: 445px;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.9fr 0.1fr;
+
+  gap: 10px;
+
+  grid-template-areas:
+    "HEADER HEADER"
+    "IMAGE TEXT"
+    "IMAGE LINK";
+}
+
+.iMage-double {
+  display: flex;
+  align-items: center;
+}
+
+.iMage-double > div:first-child {
+  margin-right: 10px;
+}
+
+.iMage-triple {
   display: flex;
   flex-direction: column;
 
-  align-items: center;
+  gap: 10px;
+}
+
+.iMage-triple > div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.iMage-triple > div:last-child > img {
+  max-height: 87px;
+}
+
+.iMage-triple > div:last-child {
+  display: flex;
   justify-content: center;
+}
 
-  background-color: var(--light);
+.abt-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
-  color: var(--dark);
+  padding: 15px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+  background-color: var(--dark);
+  color: var(--light);
   font-weight: 600;
-  font-size: large;
+  font-size: 200%;
 
-  text-decoration: none;
-
+  border-style: none;
   border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
 }
 
-.lan2-text > p > img {
-  max-height: 15px;
-  max-width: 15px;
+/*CMDER*/
+
+.cmder {
+  align-self: center;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  height: 100px;
+  width: 100px;
+  background-image: url("../images/cmder.png");
+  background-size: contain;
+
+  transition-duration: 1s;
 }
 
-.lan2-text > p {
-  padding: 0 10px 0 10px;
-  text-align: start;
+.cmder:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url("../images/freeman_classic.png");
+  background-size: contain;
+
+  transition-duration: 3s;
 }
 
-/*lan-3*/
-.lanname3 {
-  grid-area: lanname3;
+/*END OF CMDER*/
+
+#py_header {
+  background-image: linear-gradient(
+    to right,
+    rgb(66, 129, 179) 40%,
+    rgb(255, 233, 88)
+  );
+}
+
+#c_header {
+  background-color: rgb(92, 107, 192);
+}
+
+#njs_header {
+  background-color: rgb(104, 159, 99);
+}
+
+#HCJ_header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -440,127 +391,18 @@ div > img {
     rgb(32, 98, 175) 57%,
     rgb(247, 223, 30) 100%
   );
-
-  color: var(--light);
-  font-weight: 600;
-  font-size: 200%;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
 }
 
-.lan-3 {
-  grid-area: lan-3;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-  align-items: center;
-  justify-content: center;
-  padding: 5px 5px 0 5px;
-
-  background-color: var(--cl_lang_bg);
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--cl_lang_bg);
-
-  grid-template-areas:
-    "abt-html abt-html abt-css abt-css"
-    " . abt-js abt-js . ";
+#git_header {
 }
 
-.lan3-text {
-  grid-area: lan3-text;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--light);
-
-  text-align: center;
-  color: var(--dark);
-  font-weight: 600;
-  font-size: large;
-
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
+#OS_header {
 }
 
-.abt-html {
-  grid-area: abt-html;
+#IDE_header {
 }
 
-.abt-css {
-  grid-area: abt-css;
+#cmd_header {
 }
 
-.abt-js {
-  grid-area: abt-js;
-}
-
-/*lan-4*/
-.lanname4 {
-  grid-area: lanname4;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 15%;
-
-  background-color: rgb(104, 159, 99);
-
-  color: var(--light);
-  font-weight: 600;
-  font-size: 200%;
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-}
-
-.lan-4 {
-  grid-area: lan-4;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--cl_lang_bg);
-
-  padding: 30px;
-
-  font-weight: 700;
-  font-size: 500%;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--cl_lang_bg);
-}
-
-.lan4-text {
-  grid-area: lan4-text;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--light);
-
-  text-align: center;
-  color: var(--dark);
-  font-weight: 600;
-  font-size: large;
-
-  text-decoration: none;
-
-  border-radius: var(--border_rad_px);
-  border-style: solid;
-  border-color: var(--dark);
-}
+/*#######################-END OF WRAPPER-##############################################################*/
