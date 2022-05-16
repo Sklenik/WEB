@@ -122,7 +122,8 @@
 .proj1-text {
   grid-area: proj1-text;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 
   background-color: var(--light);
@@ -141,7 +142,8 @@
 .proj2-text {
   grid-area: proj2-text;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 
   background-color: var(--light);
@@ -656,4 +658,77 @@
 
 .P_button_1:hover {
   background-color: white;
+}
+
+.scr1-text,
+.scr2-text,
+.scr3-text,
+.scr4-text,
+.scr5-text,
+.scr6-text,
+.proj1-text,
+.proj2-text {
+  list-style: inside;
+  text-align: start;
+  padding: 10px;
+  gap: 10px;
+
+  font-weight: 600;
+}
+
+.proj1-text ul > li:not(:last-child),
+.proj2-text ul > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.scr1-text ul > li:not(:last-child),
+.scr2-text ul > li:not(:last-child),
+.scr3-text ul > li:not(:last-child),
+.scr4-text ul > li:not(:last-child),
+.scr5-text ul > li:not(:last-child),
+.scr6-text ul > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.scr1-link,
+.scr2-link,
+.scr3-link,
+.scr4-link,
+.scr5-link,
+.scr6-link {
+  color: gray;
+}
+
+.proj1-text > div,
+.proj2-text > div {
+  margin-top: 20px;
+}
+
+.proj1-text > div > a,
+.proj2-text > div > a {
+  padding: 5px 10px 5px 10px;
+
+  background-color: var(--dark);
+  text-decoration: none;
+  color: var(--light);
+  transition-duration: 1s;
+
+  border-style: none;
+  border-radius: var(--border_rad_px);
+}
+
+.proj1-text > div > a:hover,
+.proj2-text > div > a:hover {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
+.scr1-link > a,
+.scr2-link > a,
+.scr3-link > a,
+.scr4-link > a,
+.scr5-link > a,
+.scr6-link > a {
+  color: gray;
 }

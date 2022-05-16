@@ -202,8 +202,9 @@ div > img {
 
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 
-  padding: 10px;
+  padding-left: 20px;
 
   background-color: var(--dark);
 
@@ -249,13 +250,10 @@ div > img {
 .tExt,
 .lInk {
   display: flex;
-  align-items: center;
-  justify-content: center;
 
   background-color: var(--light);
 
   font-weight: 600;
-  font-size: large;
   color: var(--dark);
 
   border-color: var(--dark);
@@ -266,6 +264,9 @@ div > img {
 /*TEXT*/
 .tExt {
   grid-area: TEXT;
+
+  align-items: center;
+  justify-content: center;
 
   list-style: inside;
   padding: 0 10px 0 10px;
@@ -280,9 +281,16 @@ div > img {
 /*LINK*/
 .lInk {
   grid-area: LINK;
-
   align-items: center;
   justify-content: center;
+
+  gap: 1px;
+
+  font-size: 100%;
+}
+
+.lInk > a {
+  color: gray;
 }
 
 .abt-section {
